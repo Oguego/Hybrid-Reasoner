@@ -1,0 +1,19 @@
+http://10.12.102.156/cgi-bin/cmh/log.sh?Device=LuaUPnP
+
+DrawRighWardrobe
+
+10.12.102.156
+
+tail -f /var/log/cmh/LuaUPnP.log
+
+|(data.getVariable().getVariable().contentEquals("ArmedTripped"))
+|(data.getVariable().getVariable().contentEquals("Tripped"))
+
+KitchenDoor
+CorridorFrontMove
+LivingRoomPressure
+LivingRoomPIR
+DrawRighWardrobe
+
+
+36,Master Bedroom,ON,100

@@ -1,0 +1,73 @@
+SELECT "+state+" FROM sensors.results WHERE iteration = (SELECT MAX(iteration) from sensors.results);
+
+
+
+states( lampOn, PadIdle, Radio);
+
+is(PadIdle);
+is(#PadIdle);
+
+holdsAt(PadIdle, 0);
+holdsAt(#lampOn, 0);
+holdsAt(#Radio, 0);
+
+ssr((#PadIdle) -> lampOn);
+
+ssr((PadIdle) -> #lampOn);
+
+ssr((#lampOn) -> Radio);
+
+
+===============================================
+
+states(lampOn, PadIdle, Radio, SmallLamp);
+
+is(PadIdle);
+is(#PadIdle);
+is(#Radio);
+is(#SmallLamp);
+
+holdsAt(PadIdle, 0);
+holdsAt(#lampOn, 0);
+holdsAt(#Radio, 0);
+holdsAt(#SmallLamp, 0);
+
+ssr((#PadIdle) -> lampOn);
+ssr(([-][5s.]lampOn ^ #Radio) -> SmallLamp);
+ssr(([-][5s.]SmallLamp) -> Radio);
+
+ssr((PadIdle) -> #lampOn);
+ssr((PadIdle) -> #Radio);
+ssr((PadIdle) -> #SmallLamp);
+
+================================================
+states(BedRoomLight, PadIdle, Radio);
+
+is(PadIdle);
+is(#PadIdle);
+is(#Radio);
+
+holdsAt(PadIdle, 0);
+holdsAt(#BedRoomLight, 0);
+holdsAt(#Radio, 0);
+
+ssr((#PadIdle) -> BedRoomLight);
+ssr(([-][5s.]BedRoomLight) -> Radio);
+
+ssr((PadIdle) -> #BedRoomLight);
+ssr((PadIdle) -> #Radio);
+==================================================
+states(BedRoomLight, PadIdle, Movement);
+
+is(PadIdle);
+is(#PadIdle);
+
+holdsAt(PadIdle, 0);
+holdsAt(BedRoomLight, 0);
+holdsAt(#Movement, 0);
+
+ssr((#PadIdle ^ #Movement) -> #BedRoomLight);
+
+ssr((PadIdle ^ Movement) -> BedRoomLight);
+
+

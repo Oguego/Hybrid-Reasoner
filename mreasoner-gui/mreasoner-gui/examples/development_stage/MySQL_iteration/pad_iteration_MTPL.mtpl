@@ -1,0 +1,12 @@
+states( lampOn, PadIdle);
+
+is(#PadIdle);
+ 
+holdsAt(#PadIdle, 0);
+holdsAt(#lampOn, 0);
+
+occurs( ingr( PadIdle ), 4);
+occurs( ingr( #PadIdle), 87);
+
+ssr((PadIdle) -> lampOn);
+ssr((#PadIdle) -> #lampOn);

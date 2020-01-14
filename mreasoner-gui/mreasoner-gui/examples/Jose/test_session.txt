@@ -1,0 +1,29 @@
+states( s1, s2, s3, s4, m,w);
+
+//independent states:sensors shot
+is(#s1);
+is(#s2);
+is(#s3);
+is(#s4);
+
+// Trigers simulates the sensors shots
+occurs( ingr( s3 ), 6);
+occurs( ingr( s2 ), 7);
+occurs( ingr( s1 ), 9);
+occurs( ingr( s4),14);
+
+//Init dependent states
+holdsAt(#w, 0);
+//holdsAt(m, 0);
+
+// Init m with whatever shot sensor
+ssr((<->[2]s2) -> w);
+
+//ssr(([-][1]s1)->#s1);
+//ssr(([-][1]s2)->#s2);
+//ssr(([-][1]s3)->#s3);
+
+//ssr(([-][1]m)->#m);
+//ssr(([-][1]m)->w);
+//after wandering init all 
+//ssr(([-][1] w) -> #w);

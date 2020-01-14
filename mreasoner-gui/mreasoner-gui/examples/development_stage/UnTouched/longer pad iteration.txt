@@ -1,0 +1,54 @@
+states( lampOn, PadIdle);
+
+is(#PadIdle);
+
+holdsAt(PadIdle, 0);
+holdsAt(#lampOn, 0);
+
+occurs( ingr( #PadIdle ), 4);
+
+ssr((#PadIdle) -> lampOn);
+
+occurs( ingr( PadIdle), 30);
+
+ssr((PadIdle) -> #lampOn);
+
+occurs( ingr( #PadIdle ), 48);
+
+ssr((#PadIdle) -> lampOn);
+
+occurs( ingr( PadIdle), 60);
+
+ssr((PadIdle) -> #lampOn);
+
+occurs( ingr( #PadIdle ), 78);
+
+ssr((#PadIdle) -> lampOn);
+
+occurs( ingr( PadIdle), 90);
+
+ssr((PadIdle) -> #lampOn);
+
+occurs( ingr( #PadIdle ), 114);
+
+ssr((#PadIdle) -> lampOn);
+
+occurs( ingr( PadIdle), 130);
+
+ssr((PadIdle) -> #lampOn);
+
+occurs( ingr( #PadIdle ), 148);
+
+ssr((#PadIdle) -> lampOn);
+
+occurs( ingr( PadIdle), 160);
+
+ssr((PadIdle) -> #lampOn);
+
+occurs( ingr( #PadIdle ), 178);
+
+ssr((#PadIdle) -> lampOn);
+
+occurs( ingr( PadIdle), 190);
+
+ssr((PadIdle) -> #lampOn);

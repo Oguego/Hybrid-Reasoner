@@ -1,0 +1,5 @@
+states(lampOn); 
+
+is( lampOn ); 
+
+ssr((#lampOn) -> lampOn);

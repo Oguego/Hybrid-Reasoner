@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>edu.casetools.mreasoner.core</groupId>
+  <artifactId>mreasoner-core</artifactId>
+  <version>0.2</version>
+  <packaging>jar</packaging>
+
+  <name>mreasoner-core</name>
+  <url>http://maven.apache.org</url>
+
+  <licenses>
+		<license>
+			<name>GNU General Public License</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+			<distribution>repo</distribution>
+		</license>
+  </licenses>
+
+  <developers>
+		<developer>
+			<email>u.alegre@mdx.ac.uk</email>
+			<name>Unai Alegre</name>
+			<url>https://github.com/ualegre</url>
+			<id>ualegre</id>
+		</developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+  	<plugins>
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <version>3.1</version>
+		    <configuration>
+		        <source>1.8</source>
+		        <target>1.8</target>
+		    </configuration>
+		</plugin>	
+	</plugins>
+  </build>
+  
+</project>

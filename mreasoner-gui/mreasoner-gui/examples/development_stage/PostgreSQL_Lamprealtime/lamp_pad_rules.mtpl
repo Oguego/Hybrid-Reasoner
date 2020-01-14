@@ -1,0 +1,11 @@
+states( lampOn, PadIdle);
+
+is(PadIdle);
+is(#PadIdle);
+
+holdsAt(PadIdle, 0);
+holdsAt(#lampOn, 0);
+
+ssr((#PadIdle) -> lampOn);
+
+ssr((PadIdle) -> #lampOn);

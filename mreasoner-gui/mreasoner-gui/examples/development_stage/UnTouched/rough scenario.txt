@@ -1,0 +1,81 @@
+=================Pad Iteration=========================
+states( lampOn, PadIdle);
+
+is(#PadIdle);
+ 
+holdsAt(#PadIdle, 0);
+holdsAt(#lampOn, 0);
+
+occurs( ingr( PadIdle ), 4);
+occurs( ingr( #PadIdle), 87);
+
+ssr((PadIdle) -> lampOn);
+ssr((#PadIdle) -> #lampOn);
+
+================Pad Iteration 2==============================
+states( lampOn, PadIdle);
+
+is(#PadIdle);
+
+holdsAt(#PadIdle, 0);
+holdsAt(#lampOn, 0);
+
+occurs( ingr( PadIdle ), 4);
+
+ssr((PadIdle) -> lampOn);
+
+occurs( ingr( #PadIdle), 87);
+
+ssr((#PadIdle) -> #lampOn);
+
+=================Smart Office=================================
+states(advise, lampOn);
+
+ is( #lampOn );
+ is( #advise );
+
+ holdsAt(#advise,0);
+ holdsAt(#lampOn,0);
+
+ ssr( ([-][00:00:04] #lampOn )  -> lampOn);
+=====================Pad Real Environment=================
+states( lampOn, PadIdle);
+
+is(PadIdle);
+is(#PadIdle);
+
+holdsAt(PadIdle, 0);
+holdsAt(#lampOn, 0);
+
+ssr((#PadIdle) -> lampOn);
+ssr((lampOn ^ PadIdle) -> #lampOn);
+
+========================================================
+states( lampOn, PressurePadIdle);
+
+is(#PressurePadIdle);
+is(PressurePadIdle);
+
+holdsAt(PressurePadIdle, 0);
+holdsAt(#lampOn, 0);
+
+occurs( ingr( #PressurePadIdle ), 4);
+
+ssr((#PressurePadIdle) -> lampOn);
+ssr((lampOn ^ PressurePadIdle) -> #lampOn);
+=======================Light Testing=========================
+
+states(lampOn); 
+
+is( lampOn ); 
+
+ssr((#lampOn) -> lampOn);
+
+C:/Users/Chimezie/EstiLFPUBS/Jar/lampOnMySQL.jar
+======================================================
+java -jar C:/Users/Chimezie/EstiLFPUBS/mreasoner/mreasoner/lamplatest.jar
+java -jar C:/Users/Chimezie/EstiLFPUBS/mreasoner\mreasoner/newjarlamp.jar
+
+SELECT state FROM \"sensors\" WHERE device = '"+device+"
+
+SELECT device FROM \"sensors\" WHERE state = '"+state+"'

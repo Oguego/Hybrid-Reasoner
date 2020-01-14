@@ -1,0 +1,13 @@
+states(lampOn, PadIdle, Radio, SmallLamp);
+
+is(PadIdle);
+is(#PadIdle);
+is(#Radio);
+is(#SmallLamp);
+
+holdsAt(PadIdle, 0);
+holdsAt(#lampOn, 0);
+holdsAt(#Radio, 0);
+holdsAt(#SmallLamp, 0);
+
+ssr(([-][2000s.]PadIdle) -> lampOn);

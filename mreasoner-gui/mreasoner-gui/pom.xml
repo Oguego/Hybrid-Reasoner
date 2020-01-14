@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.casetools</groupId>
+  <artifactId>mreasoner-gui</artifactId>
+  <version>0.1.5</version>
+  <name>mreasoner-gui</name>
+  <url>https://github.com/ualegre/mreasoner-gui/</url>
+  
+  	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+  
+	<issueManagement>
+		<url>https://github.com/ualegre/mreasoner-gui/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/ualegre/mreasoner-gui/</url>
+		<connection>scm:git:git://github.com//ualegre/mreasoner-gui.git</connection>
+		<developerConnection>scm:git:git@github.com:ualegre/mreasoner-gui.git</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<email>u.alegre@mdx.ac.uk</email>
+			<name>Unai Alegre</name>
+			<url>https://github.com/ualegre</url>
+			<id>ualegre</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+		    <groupId>edu.casetools.mreasoner.core</groupId>
+		    <artifactId>mreasoner-core</artifactId>
+		    <version>0.2</version>
+		</dependency>
+			
+		<dependency>
+		    <groupId>com.github.ualegre</groupId>
+		    <artifactId>vera-manager</artifactId>
+		    <version>v0.2.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>edu.casetools</groupId>
+		    <artifactId>mreasoner</artifactId>
+		    <version>0.2</version>
+		</dependency>
+				
+	</dependencies>
+    
+</project>
